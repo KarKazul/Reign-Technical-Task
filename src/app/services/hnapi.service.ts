@@ -17,12 +17,4 @@ export class HnapiService {
   public getDataByPage(contentType: string, pageNum: number) {
     return this.http.get(`https://hn.algolia.com/api/v1/search_by_date?query=${contentType}&page=${pageNum}&hitsPerPage=8`);
   };
-
-  public parseNewsData(news: News[]):void {
-    const currentFavs = this.localStorage.getFavoriteNews();
-    const newData = news.map(news => {
-      const found = !!currentFavs.find((fav:News) => fav.created_at === news.created_at);
-      return { ...news,isFavorite: found };
-    });
-  };
 }

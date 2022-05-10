@@ -45,14 +45,7 @@
 .column1 {
     float: right;
     width: 15%;
-  }  
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
+  } 
 .like {
     width: 65px;
     height: 89px;

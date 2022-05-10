@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { CardListComponent } from './card-list.component';
 import { NewsCardModule } from '../news-card/news-card.module';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 
 
@@ -11,7 +12,8 @@ import { NewsCardModule } from '../news-card/news-card.module';
   imports: [
     CommonModule,
     CardListComponent,
-    NewsCardModule
+    NewsCardModule,
+    InfiniteScrollModule
   ]
 })
 export class CardListModule { }

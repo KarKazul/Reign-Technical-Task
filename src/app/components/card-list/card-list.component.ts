@@ -12,7 +12,8 @@ import { LocalStorageService } from 'src/app/services/local-storage.service';
 export class CardListComponent implements OnInit {
   obsArray: BehaviorSubject<News[]> = new BehaviorSubject<News[]>([]);
   DataNews$: Observable<any> = this.obsArray.asObservable();
-  contentType: string = "angular";
+  public contentType = "angular";
+  pageNum: number = 0;
 
   constructor(private appService: HnapiService, private localStorage: LocalStorageService) { }
 
@@ -25,5 +26,15 @@ export class CardListComponent implements OnInit {
     this.appService.getData(this.contentType).subscribe((data: any) => {
       this.obsArray.next(data.hits);
     });
+  }
+
+  private getDataByPage(){
+    this.appService.getDataByPage(this.contentType,this.pageNum).subscribe((data: any) => {
+      this.obsArray.next(data.hits);
+    })
+  }
+
+  onScrollDown(): void{
+    this.getDataByPage();
   }
 }

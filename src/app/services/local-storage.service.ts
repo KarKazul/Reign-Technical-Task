@@ -17,7 +17,7 @@ export class LocalStorageService {
   addOrRemoveFavorite(News: News): void{
     const {created_at} = News;
     const currentFavs = this.getFavoriteNews();
-    const found = !!currentFavs.find((fav: News) => fav.created_at=== created_at)
+    const found = !!currentFavs.find((fav: News) => fav.created_at === created_at)
 
     found ? this.removeFromFavorite(created_at) : this.addOrRemoveFavorite(News);
   }

@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import { News } from 'src/app/interface/news';
+import { LocalStorageService } from 'src/app/services/local-storage.service';
 
 @Component({
   selector: 'app-news-card',
@@ -9,7 +10,7 @@ import { News } from 'src/app/interface/news';
 })
 export class NewsCardComponent implements OnInit {
   @Input() News: any;
-  constructor() { }
+  constructor(private localStorage: LocalStorageService) { }
 
   ngOnInit(): void {
   }
@@ -22,6 +23,7 @@ export class NewsCardComponent implements OnInit {
     const isFavorite = this.News.isFavorite;
     this.getIcon();
     this.News.isFavorite = !isFavorite;
+    this.localStorage.addOrRemoveFavorite(this.News);
   }
 
 }
