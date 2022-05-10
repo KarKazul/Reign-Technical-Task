@@ -1,0 +1,23 @@
+<article class="card">
+    <div class="row">
+        <div class ="column">
+            <a href="{{News.story_url}}" class="card_link">
+                <div class="time_author">
+                    <span>
+                        X time ago by {{News.author}}
+                    </span>
+                </div>
+                <div class="card_details">
+                    <label class="font">{{News.story_title}}</label>   
+                </div>
+            </a>
+        </div>
+        <div class="column1">   
+            <figure class="like">
+                <div class="heart">
+                    <img (click)="toggleFavorite" rel="preload" as="image" withd="24" height="22" src="assets/imgs/{{getIcon()}}" alt="Favorite"/>
+                </div>
+            </figure>
+        </div>
+    </div>            
+</article>  

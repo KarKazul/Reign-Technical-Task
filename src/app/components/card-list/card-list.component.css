@@ -1,0 +1,11 @@
+.news_list{
+    display:flex;
+    flex-wrap: wrap;
+    padding-left: 15%;
+    padding-right: 15%;
+    display:grid;
+    gap:10px;
+    grid-auto-rows: 7rem;
+    grid-template-columns: repeat(auto-fill,minmax(35rem,1fr));
+    height:auto;
+}

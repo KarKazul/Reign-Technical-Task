@@ -1,0 +1,73 @@
+.card {
+    width: 550px;
+    height: 90px;
+    border-radius: 6px;
+    opacity: 0.8;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border: solid 1px #979797;
+    background-color: #fff;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    opacity: 30%;
+}
+
+.card_details{
+    padding-left: 30px;
+    padding-right: 10px;
+    padding-bottom: 30px;
+    padding-top: 15px;
+}
+
+.time_author{
+
+    padding-left: 30px;
+    padding-top: 10px;
+}
+
+.font{
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: 0.25px;
+    color: #6b6b6b;
+}
+
+.column {
+    float: left;
+    width: 85%;
+}
+.column1 {
+    float: right;
+    width: 15%;
+  }  
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.like {
+    width: 65px;
+    height: 89px;
+    margin: 0 0 0 16px;
+    border-radius: 6px;
+    border: solid 1px rgba(96, 96, 96,0.06);
+    background-color: rgba(96, 96, 96,0.06);
+}
+
+.heart{
+    padding-top: 30px;
+    padding-left: 20px;
+}
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
