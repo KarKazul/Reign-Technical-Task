@@ -9,7 +9,7 @@ import { LocalStorageService } from 'src/app/services/local-storage.service';
 export class FavoritesComponent implements OnInit {
 
   constructor(private localStorage: LocalStorageService) { }
-  newsFav$ = this.localStorage.newsFav$;
+  newsFav$ = this.localStorage.newsFav$; //we get the favorite news into the observanle array to list it;
   ngOnInit(): void {
   }
 

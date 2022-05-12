@@ -17,8 +17,10 @@ export class NewsCardComponent implements OnInit {
   }
 
   getIcon(): string{
-    return this.News.isFavorite ? 'heart-filled.svg' : 'heart.svg';
+    return this.News.isFavorite ? 'heart-filled.svg' : 'heart.svg'; // Boolean that changes depending on whether we add to favorite a certain new or not;
   }
+
+  /* This method gets the boolean state of one new and inverses it when the function is called to add or remove the new from the favorite local storage */
 
   toggleFavorite(): void{
     const isFavorite = this.News.isFavorite;

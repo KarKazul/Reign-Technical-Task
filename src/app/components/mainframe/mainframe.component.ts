@@ -8,7 +8,7 @@ import { Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
 
 
 export class MainframeComponent implements OnInit {
-  showFirst = true
+  showFirst = true  //flags that that are used to toggle between all the news and the favorite ones.
   showSecond = false
 
   constructor() { }

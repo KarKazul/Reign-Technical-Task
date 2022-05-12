@@ -12,20 +12,24 @@ import { of } from 'rxjs';
   styleUrls: ['./card-list.component.css']
 })
 export class CardListComponent implements OnInit {
-  DataNews$ = this.appService.news$;
-  pageNum: number = 1;
-  contentType = "angular";
+  DataNews$ = this.appService.news$; // Observable array that is used to give the information to populate the list
+  pageNum: number = 1; //Page number used to change the query and get the data
+  contentType = "angular"; //String used to change the query between angular, react and vuejs news
 
   constructor(private appService: HnapiService, private localStorage: LocalStorageService) { }
 
   ngOnInit(): void {
-    this.appService.getData(this.contentType);
+    this.appService.getData(this.contentType); //Get the initial array of news
   }
 
   onScrollDown(): void {
-    this.appService.getDataByPage(this.contentType,this.pageNum);
-    this.pageNum++;
+    this.appService.getDataByPage(this.contentType,this.pageNum); //When we get close to the bottom of the scroll bar we activate this funtion loading and parsing more pages into DataNews$
+    this.pageNum++;//we increase the number of the page
   }
+
+
+  /*When we change the valuo of contenType with the dropdown selector we an event is activated resetting the page number and
+ the Array news to later get a new one with the desired topic */
 
   onChange(contentType: string):void {
     this.pageNum = 1;
