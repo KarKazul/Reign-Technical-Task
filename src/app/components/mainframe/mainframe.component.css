@@ -53,3 +53,19 @@ header {
     padding-top: 3rem;
 
   }
+
+  @media screen and (max-width: 768px) {
+    header{
+      display: flex;
+      padding: 20px;
+      float:none;
+    }
+
+    .logo{
+      padding-right: 0%;
+    }
+    .container{
+      padding-top: 3rem;
+
+    }
+  }

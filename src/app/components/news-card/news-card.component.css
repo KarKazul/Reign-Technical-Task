@@ -1,4 +1,5 @@
 .card {
+    display: flexbox;
     width: 34rem;
     height: 5.7rem;
     border-radius: 6px;
@@ -6,6 +7,7 @@
     transition: 0.3s;
     border: solid 1px #979797;
     background-color: #ffffff;
+    transition: all 0.3s ease 0s;
 }
 
 .card:hover {
@@ -27,6 +29,7 @@
 }
 
 .font{
+    width: fit-content ;
     font-family: Roboto;
     font-size: 14px;
     font-weight: 500;
@@ -78,4 +81,26 @@ a, a:hover, a:focus, a:active {
   letter-spacing: normal;
 
   color: #767676;
+}
+
+
+@media screen and (max-width: 768px) {
+  .card{
+    display: flex;
+    width: 26rem;
+    transition: .25s ease-in-out;
+  }
+  .column {
+    float: left;
+    width: 90%;
+}
+  .column1 {
+    position: absolute;
+    padding-left: 45%;
+    width: 10%;
+    transition: .25s ease-in-out;
+  }
+
+
+
 }
