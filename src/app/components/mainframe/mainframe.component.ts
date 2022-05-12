@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
 
 @Component({
   selector: 'app-mainframe',
@@ -8,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 
 
 export class MainframeComponent implements OnInit {
- 
+  showFirst = true
+  showSecond = false
+
   constructor() { }
- 
+
   ngOnInit() {
+    ;
   }
-}  
+
+  toggle():void{
+    this.showFirst = true;
+    this.showSecond = false;
+  }
+
+  toggle1():void{
+    this.showFirst = false;
+    this.showSecond = true;
+  }
+
+}

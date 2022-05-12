@@ -55,10 +55,9 @@ export class LocalStorageService {
 
   initialStorage(): void{
     const current = JSON.parse(localStorage.getItem(FAVORITES) || '{}');
-    if(!!current){
+    if(!current){
       localStorage.setItem(FAVORITES, JSON.stringify([]));
     }
-    console.log(FAVORITES);
     this.getFavoriteNews();
   }
 }

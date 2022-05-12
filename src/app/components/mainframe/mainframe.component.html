@@ -5,4 +5,15 @@
         </div>
     </div>
 </header>
-<app-card-list></app-card-list>
+<div class="container">
+  <button class="button" (click) ="toggle()" >All</button>
+  <button class="button" (click) ="toggle1()" >My favs</button>
+</div>
+<div *ngIf="(showFirst == true) && (showSecond == false)">
+  <app-card-list ></app-card-list>
+</div>
+<div *ngIf="(showFirst == false) && (showSecond == true)">
+  <app-favorites></app-favorites>
+</div>
+
+

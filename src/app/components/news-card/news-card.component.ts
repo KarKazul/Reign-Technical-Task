@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import { News } from 'src/app/interface/news';
 import { LocalStorageService } from 'src/app/services/local-storage.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-news-card',

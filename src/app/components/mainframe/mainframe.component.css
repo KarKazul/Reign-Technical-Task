@@ -1,6 +1,6 @@
 header {
     width: 100%;
-    padding: 44px 0;
+    padding: 38px 0;
     background: linear-gradient(to bottom, #ececec -32%, #fff 124%);
     box-shadow: 0 1px 4px 0 rgba(0, 21, 41, 0.12);
 }
@@ -9,8 +9,7 @@ header {
 
     width: 208px;
     height: 28px;
-    padding-left: 7%;
-    object-fit: contain;
+    padding-right: 70%;
     font-family: Baskerville;
     font-size: 28px;
     font-weight: normal;
@@ -19,4 +18,38 @@ header {
     line-height: 1;
     letter-spacing: normal;
     color: #3b3b3b;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body{
+    background-color: #fcfcfc;
+  }
+
+  .button {
+    width: 98px;
+
+    height: 31px;
+
+    padding: 3px 16px 0 17px;
+    font-size: 16px;
+
+    border-radius: 2px;
+
+    border: solid 1px #d6d6d6;
+
+  }
+
+  .button:hover{
+    border: solid 1px #d6d6d6;
+  }
+
+  .container{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 3rem;
+
   }
