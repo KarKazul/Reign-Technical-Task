@@ -1,5 +1,6 @@
 .news_list{
     display:flex;
+    justify-content: center;
     flex-wrap: wrap;
     padding-left: 15%;
     padding-right: 15%;

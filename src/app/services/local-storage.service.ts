@@ -17,9 +17,8 @@ export class LocalStorageService {
   addOrRemoveFavorite(News: News): void{
     const {created_at} = News;
     const currentFavs = this.getFavoriteNews();
-    const found = !!currentFavs.find((fav: News) => fav.created_at === created_at)
-
-    found ? this.removeFromFavorite(created_at) : this.addOrRemoveFavorite(News);
+    const found = !!currentFavs.find((fav: News) => fav.created_at === created_at);
+    found ? this.removeFromFavorite(created_at) : this.addToFavorite(News);
   }
 
   private addToFavorite(News: News): void{
@@ -54,11 +53,12 @@ export class LocalStorageService {
 
   }
 
-  private initialStorage(): void{
-    const currents = JSON.parse(localStorage.getItem(FAVORITES) || '{}');
-    if(!currents){
+  initialStorage(): void{
+    const current = JSON.parse(localStorage.getItem(FAVORITES) || '{}');
+    if(!!current){
       localStorage.setItem(FAVORITES, JSON.stringify([]));
     }
+    console.log(FAVORITES);
     this.getFavoriteNews();
   }
 }

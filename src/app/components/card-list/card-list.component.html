@@ -1,3 +1,5 @@
-<section class ="news_list">
+<section class ="news_list" infiniteScroll
+(scrolled)="onScrollDown()"
+>
     <app-news-card *ngFor="let News of DataNews$ | async "[News]="News"></app-news-card>
 </section>
